@@ -154,7 +154,7 @@ If you're having issues with UberGallery here are a few troubleshooting tips:
 
     ```
     rm resources/galleryConfig.ini
-    cp resource/sample.galleryConfig.ini resources/galleryConfig.ini
+    cp resources/sample.galleryConfig.ini resources/galleryConfig.ini
     ```
 
   * Clear your cache and make sure the directory is writable by the web server:
