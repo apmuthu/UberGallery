@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-    <title>UberGallery</title>
+    <title><?php echo $gallery->getSiteName(); ?></title>
 
     <link rel="shortcut icon" href="<?php echo THEMEPATH; ?>/img/favicon.png" />
 
@@ -19,8 +19,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <?php file_exists('googleAnalytics.inc') ? include('googleAnalytics.inc') : false; ?>
-</head>
 
+</head>
 <body>
 
     <div class="container">
@@ -28,7 +28,7 @@
         <div class="navbar navbar-inverse">
             <div class="navbar-inner">
                 <div class="container">
-                    <div class="brand">UberGallery</div>
+                    <div class="brand"><?php echo $gallery->getSiteName(); ?></div>
                 </div>
             </div>
         </div>

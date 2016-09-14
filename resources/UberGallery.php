@@ -62,6 +62,7 @@ class UberGallery {
             $config = parse_ini_file($configPath, true);
 
             // Apply configuration
+            $this->setSiteName($config['basic_settings']['site_name']);
             $this->setCacheExpiration($config['basic_settings']['cache_expiration']);
             $this->setPaginatorThreshold($config['basic_settings']['paginator_threshold']);
             $this->setThumbSize($config['basic_settings']['thumbnail_width'], $config['basic_settings']['thumbnail_height']);
@@ -246,6 +247,17 @@ class UberGallery {
 
     }
 
+    /**
+     * Returns the site name
+     *
+     * @return string site name as set in user config
+     * @access public
+     */
+    public function getSiteName() {
+        // Return the site name
+        return $this->_config['site_name'];
+    }
+
 
     /**
      * Returns the theme name
@@ -257,7 +269,6 @@ class UberGallery {
         // Return the theme name
         return $this->_config['theme_name'];
     }
-
 
     /**
      * Returns the path to the chosen theme directory
@@ -404,6 +415,18 @@ class UberGallery {
         return $this;
     }
 
+    /**
+     * Set site name as Gallery Heading
+
+     * @param string $name site name (default = UberGallery)
+     * @return object Self
+     * @access public
+     */
+    public function setSiteName($name = 'UberGallery') {
+        $this->_config['site_name'] = $name;
+
+        return $this;
+    }
 
     /**
      * Set theme name
